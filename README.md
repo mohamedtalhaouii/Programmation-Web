@@ -1,4 +1,4 @@
-## Résumé de HTML
+# HTML
 
 ### 1. Structure de Document HTML5
 
@@ -75,9 +75,9 @@ HTML5 a introduit des balises sémantiques pour améliorer l'organisation et l'a
 - **`<aside>`** : Informations complémentaires ou barre latérale.
 - **`<main>`** : Contenu principal de la page.
 
-<hr>
 
-## Résumé Complet de CSS
+
+# CSS :
 
 ### 1. Inclusion de CSS
 - **En ligne** : 
@@ -149,5 +149,258 @@ HTML5 a introduit des balises sémantiques pour améliorer l'organisation et l'a
 - **Media Queries** : Permet d'appliquer des styles conditionnels en fonction de la taille de l'écran.
 
 
-<hr>
+# JavaScript :
+
+1. [Bases de JavaScript](#1-bases-de-javascript)  
+   - [Variables et Types de Données](#11-variables-et-types-de-données)  
+   - [Opérateurs](#12-opérateurs)  
+   - [Structures Conditionnelles](#13-structures-conditionnelles)  
+
+2. [Boucles](#2-boucles)  
+   - [Boucle For](#21-boucle-for)  
+   - [Boucle While](#22-boucle-while)  
+   - [Boucle Do...While](#23-boucle-dowhile)  
+
+3. [Fonctions](#3-fonctions)  
+   - [Déclaration de Fonction](#31-déclaration-de-fonction)  
+   - [Fonction Anonyme](#32-fonction-anonyme)  
+   - [Fonction Fléchée](#33-fonction-fléchée)  
+   - [Fonction Auto-Exécutée (IIFE)](#34-fonction-auto-exécutée-iife)  
+
+4. [Objets et Tableaux](#4-objets-et-tableaux)  
+   - [Objets](#41-objets)  
+   - [Tableaux](#42-tableaux)  
+
+5. [Programmation Asynchrone](#5-programmation-asynchrone)  
+   - [Callback](#51-callback)  
+   - [Promises](#52-promises)  
+   - [Async/Await](#53-asyncawait)  
+
+6. [API Web](#6-api-web)  
+   - [Fetch API](#61-fetch-api)  
+   - [Événements](#62-événements)  
+
+7. [Concepts Avancés](#7-concepts-avancés)  
+   - [Closures](#71-closures)  
+   - [Modules](#72-modules)  
+
+8. [Optimisation et Meilleures Pratiques](#8-optimisation-et-meilleures-pratiques)  
+   - [Gestion de la Mémoire](#81-gestion-de-la-mémoire)  
+   - [Optimisation des Performances](#82-optimisation-des-performances)
+
+
+## **1. Bases de JavaScript**  
+
+### **1.1 Variables et Types de Données**  
+```javascript
+let nom = "Jean";  
+let age = 25;  
+let actif = true;  
+let utilisateur = { nom: "Jean", age: 25 };  
+let couleurs = ["rouge", "vert", "bleu"];  
+let inconnu = null;  
+let nonDefini;  
+```
+
+### **1.2 Opérateurs**  
+```javascript
+console.log(5 + 2);  // Addition  
+console.log(5 === 2); // Comparaison stricte  
+console.log(true && false); // Opérateur logique  
+```
+
+### **1.3 Structures Conditionnelles**  
+```javascript
+let x = 10;  
+if (x > 5) {  
+  console.log("Supérieur à 5");  
+} else {  
+  console.log("Inférieur ou égal à 5");  
+}
+```
+
+
+## **2. Boucles**  
+
+### **2.1 Boucle For**  
+```javascript
+for (let i = 0; i < 5; i++) {  
+  console.log(i);  
+}
+```
+
+### **2.2 Boucle While**  
+```javascript
+let i = 0;  
+while (i < 5) {  
+  console.log(i);  
+  i++;  
+}
+```
+
+### **2.3 Boucle Do...While**  
+```javascript
+let j = 0;  
+do {  
+  console.log(j);  
+  j++;  
+} while (j < 5);
+```
+
+
+## **3. Fonctions**  
+
+### **3.1 Déclaration de Fonction**  
+```javascript
+function saluer(nom) {  
+  return "Bonjour, " + nom;  
+}
+console.log(saluer("Alice"));
+```
+
+### **3.2 Fonction Anonyme**  
+```javascript
+const addition = function (a, b) {  
+  return a + b;  
+};
+console.log(addition(2, 3));
+```
+
+### **3.3 Fonction Fléchée**  
+```javascript
+const multiplier = (a, b) => a * b;  
+console.log(multiplier(3, 4));
+```
+
+### **3.4 Fonction Auto-Exécutée (IIFE)**  
+```javascript
+(function () {  
+  console.log("Fonction auto-exécutée !");
+})();
+```
+
+
+## **4. Objets et Tableaux**  
+
+### **4.1 Objets**  
+```javascript
+let personne = {  
+  prenom: "Jean",  
+  nom: "Dupont",  
+  age: 30,  
+  nomComplet: function () {  
+    return this.prenom + " " + this.nom;  
+  }  
+};
+console.log(personne.nomComplet());
+```
+
+### **4.2 Tableaux**  
+```javascript
+let nombres = [1, 2, 3, 4, 5];  
+console.log(nombres.length);
+```
+
+
+## **5. Programmation Asynchrone**  
+
+### **5.1 Callback**  
+```javascript
+function obtenirDonnees(callback) {  
+  setTimeout(() => {  
+    callback("Données reçues");  
+  }, 2000);  
+}
+obtenirDonnees(data => console.log(data));
+```
+
+### **5.2 Promises**  
+```javascript
+function obtenirDonnees() {  
+  return new Promise((resolve) => {  
+    setTimeout(() => resolve("Données reçues"), 2000);  
+  });  
+}
+obtenirDonnees().then(data => console.log(data));
+```
+
+### **5.3 Async/Await**  
+```javascript
+async function fetchData() {  
+  let data = await obtenirDonnees();  
+  console.log(data);  
+}
+fetchData();
+```
+
+
+## **6. API Web**  
+
+### **6.1 Fetch API**  
+```javascript
+fetch("https://jsonplaceholder.typicode.com/posts/1")  
+  .then(response => response.json())  
+  .then(data => console.log(data))  
+  .catch(error => console.error(error));
+```
+
+### **6.2 Événements**  
+```javascript
+document.getElementById("btn").addEventListener("click", () => {  
+  alert("Bouton cliqué !");
+});
+```
+
+
+## **7. Concepts Avancés**  
+
+### **7.1 Closures**  
+```javascript
+function externe() {  
+  let compteur = 0;  
+  return function interne() {  
+    compteur++;  
+    console.log(compteur);  
+  };
+}
+const incrementer = externe();  
+incrementer();  
+incrementer();
+```
+
+### **7.2 Modules**  
+```javascript
+export const saluer = (nom) => `Bonjour, ${nom}`;  
+export default function somme(a, b) {  
+  return a + b;  
+}
+```
+
+---
+
+## **8. Optimisation et Meilleures Pratiques**  
+
+### **8.1 Gestion de la Mémoire**  
+```javascript
+let map = new WeakMap();  
+let obj = { cle: "valeur" };  
+map.set(obj, "Bonjour");  
+obj = null;  
+```
+
+### **8.2 Optimisation des Performances**  
+```javascript
+const factorialMemo = (function () {  
+  let cache = {};  
+  return function (n) {  
+    if (n in cache) return cache[n];  
+    return (cache[n] = n === 0 ? 1 : n * factorialMemo(n - 1));  
+  };  
+})();
+console.log(factorialMemo(5));
+```
+
+---
+
 <h3 align="center"> 🧑🏻‍💻 | Made By : <a href="https://github.com/mohamedtalhaouii" target="_blank">Mohamed Talhaoui</a></h3>
+
