@@ -15,9 +15,9 @@ a{
     color: #333;
 }
 
-a:hover{
+p a:hover{
     color: #fff;
-    transition: ease-in-out 500ms;
+    transition: ease-out 500ms;
 }
 
 .container {
