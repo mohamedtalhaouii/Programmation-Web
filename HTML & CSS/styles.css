@@ -15,6 +15,10 @@ a{
     color: #333;
 }
 
+a:hover{
+    color: #fff;
+}
+
 .container {
     display: flex;
     flex-direction: column;
