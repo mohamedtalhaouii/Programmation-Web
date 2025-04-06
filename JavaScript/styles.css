@@ -17,6 +17,7 @@ a{
 
 a:hover{
     color: #fff;
+    transition: ease-in-out 500ms;
 }
 
 
