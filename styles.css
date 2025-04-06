@@ -15,9 +15,13 @@ a{
     color: #333;
 }
 
+p a{
+    transition: ease-out 250ms;
+}
+
 p a:hover{
     color: #fff;
-    transition: ease-out 500ms;
+    transition: ease-in 250ms;
 }
 
 
