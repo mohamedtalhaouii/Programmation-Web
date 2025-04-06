@@ -10,14 +10,14 @@ body {
     line-height: 1.6;
 }
 
+a{
+    text-decoration: none;
+    color: #333;
+}
+
 p a:hover{
     color: #fff;
     transition: ease-out 500ms;
-}
-
-a:hover{
-    color: #fff;
-    transition: ease-in-out 500ms;
 }
 
 
